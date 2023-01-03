@@ -1,0 +1,6 @@
+Area = 457.253 µm^2
+Number of cycles = 2
+Clock period = 2.75 ns
+
+Performance = area * clock period * no of cycles
+		= 2514.891 um^2.ns 

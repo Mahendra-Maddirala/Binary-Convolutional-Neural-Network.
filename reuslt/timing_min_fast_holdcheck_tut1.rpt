@@ -1,0 +1,45 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : MyDesign
+Version: P-2019.03-SP1
+Date   : Thu Jul 28 02:06:57 2022
+****************************************
+
+Operating Conditions: fast   Library: NangateOpenCellLibrary_PDKv1_2_v2008_10_fast_nldm
+Wire Load Model Mode: top
+
+  Startpoint: current_state_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dut_sram_write_enable_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  current_state_reg/CK (DFFR_X1)                        0.0000     0.0000 r
+  current_state_reg/Q (DFFR_X1)                         0.0842     0.0842 r
+  dut_sram_write_enable_reg/D (DFFR_X2)                 0.0000     0.0842 r
+  data arrival time                                                0.0842
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  dut_sram_write_enable_reg/CK (DFFR_X2)                0.0000     0.0500 r
+  library hold time                                    -0.0083     0.0417
+  data required time                                               0.0417
+  --------------------------------------------------------------------------
+  data required time                                               0.0417
+  data arrival time                                               -0.0842
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0425
+
+
+1
